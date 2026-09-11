@@ -1,0 +1,30 @@
+{
+  "description": "Feature-branch (soft run) scan-isolation probe - SCA-6738",
+  "version": 1.11,
+
+  "base_config": {
+    "branch": "feature-branch",
+
+    "validate_scan_output": true,
+    "scan_output": {
+      "expected_messages": []
+    },
+
+    "validate_dependency_tree": true,
+    "dependency_tree": {
+      "check_dependency_tree_detection_status": true,
+      "check_update_request_sca_results": true,
+      "expected_total_dependencies_number": {"gte": 1},
+      "expected_direct_dependencies_number": {"eq": 1},
+      "direct_dependencies_names_list_group_id": {"eq": ["lodash"]},
+      "expected_package_managers": {"contains": ["npm"]}
+    },
+
+    "validate_feature_branch_isolation": true,
+    "feature_branch_isolation": {
+      "check_same_project": true,
+      "check_project_unchanged": true,
+      "ignored_fields": []
+    }
+  }
+}

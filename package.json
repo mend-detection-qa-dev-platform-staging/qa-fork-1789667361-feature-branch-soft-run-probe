@@ -1,0 +1,11 @@
+{
+  "name": "feature-branch-soft-run-probe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal npm probe for feature-branch (soft run) scan isolation - SCA-6738",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "4.17.20"
+  }
+}
