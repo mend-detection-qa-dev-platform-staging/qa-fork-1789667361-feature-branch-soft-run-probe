@@ -24,7 +24,8 @@
     "feature_branch_isolation": {
       "check_same_project": true,
       "check_project_unchanged": true,
-      "ignored_fields": []
+      "ignored_fields": ["lastScan.lastScanTime", "lastScan.lastScaScanTime"],
+      "_comment_ignored_fields": "A soft run IS a scan of this project, so the platform recording WHEN it last ran is bookkeeping, not the statistics/KPI mutation SCA-6738 forbids. Observed on ghc_dev: these are the ONLY two of 277 leaves that moved, i.e. tags[commitId], tags[repoFullName], generalStatistics.*, vulnerabilities.* and scaReachableVulnerabilities.* all held - the product behaved correctly. Everything outside these two paths stays strict."
     }
   }
 }
