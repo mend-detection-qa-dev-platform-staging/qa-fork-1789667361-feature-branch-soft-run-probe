@@ -1,7 +1,8 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
-    "baseBranches": []
+    "baseBranches": [],
+    "enableReachability": true
   },
   "scanSettingsSAST": {
     "enableScan": false,
